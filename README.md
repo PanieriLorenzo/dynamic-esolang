@@ -203,6 +203,82 @@ print ["std"]["type"](["a"]) == "Int"
 # > false
 ```
 
+## Built-ins
+
+Built-ins are magical keywords that do stuff. They aren't procedures, but rather part of the syntax.
+
+### Operators
+
+```
+# arithmetic / logic
++ - * / % & | ~ ^ << >> >>> and or not < > <= >= != ==
+
+# other
+["foo"]
+["foo"](5)
+```
+
+### Control Flow
+
+If:
+```rb
+if something
+  ...
+end
+
+if something
+  ...
+else
+  ...
+end
+
+if something
+  ...
+elif something
+  ...
+else
+  ...
+end
+```
+
+Loop:
+```rb
+loop
+  ...
+  continue
+  ...
+  break
+  ...
+end
+```
+
+Program control:
+```rb
+# exit program
+exit 1
+
+# exit procedure early
+return
+```
+
+### Async
+
+```rb
+["pid"] = async ["foo"](5)
+wait ["pid"]
+
+# end this thread
+die
+```
+
+### Other
+
+I/O:
+```
+print ["foo"]
+["foo"] = scan
+```
+
 ## Other Amenities
 
 - There is no scoping. Every variable is part of one giant object. 
