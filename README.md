@@ -44,3 +44,36 @@ loop
 end
 ```
 
+Triangle:
+> Determine if a triangle is equilateral, isosceles, or scalene.
+```rb
+["triangle_type"] = {
+  ["a"] = ["__args"][0]
+  ["b"] = ["__args"][1]
+  ["c"] = ["__args"][2]
+
+  # check if it is a valid triangle
+  if ["a"] == 0 or ["b"] == 0 or ["c"] == 0
+    ["__return"] = null
+    return
+  end
+  if not (["a"] + ["b"] >= ["c"] and ["a"] + ["c"] >= ["b"] and ["b"] + ["c"] >= ["d"])
+    ["__return"] = null
+    return
+  end
+  
+  # given that the trianlge is valid, do the rest
+  if ["a"] == ["b"] and ["a"] == ["c"] and ["b"] == ["c"]
+    ["__return"] == "equilateral"
+    return
+  end
+  if ["a"] == ["b"] and ["a"] != ["c"] or ["a"] == ["c"] and ["a"] != ["b"] or ["b"] == ["c"] and ["a"] != ["b"]
+    ["__return"] == "isosceles"
+    return
+  end
+  if ["a"] != ["b"] and ["b"] != ["c"]
+    ["__return"] == "scalene"
+    return
+  end
+}
+```
