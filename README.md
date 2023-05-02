@@ -202,3 +202,12 @@ print ["std"]["type"](["a"]) == "int"
 print ["std"]["type"](["a"]) == "Int"
 # > false
 ```
+
+## Other Amenities
+
+- There is no scoping. Every variable is part of one giant object. 
+- If you do recursion, assigning to a procedure's variables will ovewrite the same value for all the other calls in the stack.
+
+## Where do you get these awful ideas?
+
+There are many remarkably bad programming languages out there. This time I took inspiration from JavaScript, Ruby and PHP.
