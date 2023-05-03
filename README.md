@@ -167,7 +167,7 @@ In general, the types will tend towards this when combined:
 graph LR
 
 null --> bool --> int --> float --> str
-null --> int -> str
+null --> int --> str
 null --> float
 null --> str
 bool --> str
