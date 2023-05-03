@@ -172,9 +172,7 @@ null --> float
 null --> str
 bool --> str
 bool --> float
-str --> str
 obj --> null
-obj --> obj
 ```
 
 ## Error Handling (or lack thereof)
